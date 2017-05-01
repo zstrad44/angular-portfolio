@@ -1,0 +1,24 @@
+<div ng-controller="HomeCtrl">
+    <div class="container-fluid bg-primary hero-bg">
+        <div class="container hero-main">
+            <div class="row">
+                <div class="col-xs-12 col-lg-4 heroImgBox"> <img src="/assets/zs-circle-logo_355x355_trans.png" alt="Zach Stradling" class="img-responsive"> </div>
+                <div class="col-xs-12 col-lg-8 heroTextBox"> <span class="heroName h1"></span><br>
+                    <span class="heroSubtext h2"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container heroCards">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3 outerCard" ng-repeat="item in siteNav">
+            <a ui-sref="{{item.url}}">
+                <div class="card">
+                    <i class="fa {{item.icon}} visible-md visible-lg cardIcon"></i>
+                    <h2><i class="fa {{item.icon}} visible-xs visible-sm">&nbsp;</i> {{item.name}}</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

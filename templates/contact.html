@@ -1,0 +1,127 @@
+<div ng-controller="ContactCtrl">
+    <section class="mainSection" id="contact">
+        <div class="container-fuid sectionContainer">
+            <div class="container">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="row">
+                                <div class="cardBox sectionHead">
+                                    <h1><i class="fa fa-mobile"></i> &nbsp; Contact:</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 sectionBody">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="card formBox">
+                                        <form data-toggle="validator" role="form" name="contactForm">
+                                            <div class="col-xs-12">
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label for="name">Name:</label>
+                                                            <input type="text" name="name" class="form-control" id="name" ng-model="name" placeholder="Bill Gates" required>
+                                                            <span style="color:red" ng-show="contactForm.name.$dirty && contactForm.name.$invalid">
+                                                                <span ng-show="contactForm.name.$error.required">Your name is required.</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label for="company">Company/ Organization:</label>
+                                                            <input type="text" name="company" class="form-control" ng-model="company" id="company" placeholder="Microsoft">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12">
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label for="email">Email:</label>
+                                                            <input type="email" name="email" ng-model="email" class="form-control" id="email" placeholder="RealBillGates@hotmail.com" required>
+                                                            <span style="color:red" ng-show="contactForm.email.$dirty && contactForm.email.$invalid">
+                                                                <span ng-show="contactForm.email.$error.required">Email is required.</span>
+                                                                <span ng-show="contactForm.email.$error.email">Invalid email address.</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label for="phone">Phone:</label>
+                                                            <input type="phone" name="phone" ng-model="phone" class="form-control" id="phone" placeholder="480-555-5555">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12">
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                        <div class="form-group">
+                                                            <label for="message">Message:</label>
+                                                            <textarea class="form-control" rows="3" name="message" id="message" ng-model="message" required></textarea>
+                                                            <span style="color:red" ng-show="contactForm.message.$dirty && contactForm.message.$invalid">
+                                                                <span ng-show="contactForm.message.$error.required">A brief message is required.</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div id="captchaAlert" class="alert alert-danger captchaAlert hidden"> <strong>Oops!</strong> &nbsp;Looks like you may be a robot or you don't know my name... <b>Pro Tip: There's no "k"</b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12">
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label for="selectType">{{name}} is a:</label><br>
+                                                            <label class="radio-inline">
+                                                              <input type="radio" name="selectType" ng-model="selectType" required>Technical Recruiter
+                                                            </label>
+                                                            <label class="radio-inline">
+                                                              <input type="radio" name="selectType" ng-model="selectType" required>Other
+                                                            </label>
+                                                            <span style="color:red" ng-show="contactForm.selectType.$dirty && contactForm.selectType.$invalid">
+                                                                <span ng-show="contactForm.selectType.$error.required">A brief message is required.</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="form-group" id="captchaGroup">
+                                                            <label for="captcha" ng-model="captcha">Human Verification:</label>
+                                                            <input type="text" name="captcha" class="form-control" id="captcha" placeholder="Please Enter My First Name" ng-disabled="{{disabledRules}}" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12">
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                        <br>
+                                                        <button id="submitBtn" type="submit" class="btn btn-block squareBtn squareBtnBlue disabled"><i class="fa fa-send"></i> Send</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <br>
+                                </div>
+                                <div class="col-xs-12 col-lg-4">
+                                    <div class="card contactInfoCard">
+                                        <div class="list-group"> <a class="list-group-item" href="#"><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i>&nbsp; Email Directly</a> <a class="list-group-item" href="#"><i class="fa fa-linkedin fa-fw" aria-hidden="true"></i>&nbsp; Linkedin Profile</a>                                        <a class="list-group-item" href="#"><i class="fa fa-github fa-fw" aria-hidden="true"></i>&nbsp; Github</a> <a class="list-group-item" href="#"><i class="fa fa-file-pdf-o fa-fw" aria-hidden="true"></i>&nbsp; Download Resume</a>                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

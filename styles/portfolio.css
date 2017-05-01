@@ -1,0 +1,93 @@
+#portfolio .sectionHead {
+    margin-bottom: 40px;
+}
+#portfolio h1 {
+    margin: 0;
+}
+#portfolio .card i {
+    font-size: 3.5em;
+    color: #1b75b9;
+    text-shadow: 1px 1px #555;
+}
+#portfolio .card p {
+    font-size: 2em;
+    color: #1b75b9;
+    margin: 10px 15px;
+}
+#portfolio .card.screenShot {
+    padding: 0px;
+    margin-bottom: 35px;
+    border-width: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,.4);
+    position: relative;
+}
+#portfolio .card.screenShot .overlayBox {
+    height: 100%;
+    width: 100%;
+}
+#portfolio .card.screenShot .overlayBox .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #1b75b9;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+}
+#portfolio .card.screenShot:hover .overlay{
+    width: 100%;
+}
+#portfolio .card.screenShot .btn {
+/*    display: none;*/
+    white-space: nowrap;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+
+}
+#portfolio .card.screenShot .btn:hover {
+    background-color: #fff;
+    color: #1b75b9
+}
+#portfolio .card {
+    padding: 10px 0 0;
+    border-width: 1px;
+    transition: .3s ease;
+}
+#portfolio .card:hover {
+    box-shadow: 0px 0px 8px #bbb;
+}
+#portfolio .card .btn:hover {
+    background-color: #1b75b9;
+    color: #ffffff;
+    border-color: transparent;
+}
+.zoomModal .screenshot {
+	box-shadow: 0 0 5px rgba(0,0,0,.6);
+}
+.zoomModal .projectDetails {
+	padding: 10px 0;
+    margin: 10px 0;
+    border-top: 2px solid #555;
+}
+.zoomModal .projectDetails p {
+    font-size: 1.3em;
+    padding-left: 10px;
+}
+.zoomModal .projectDetails h3 {
+    font-size: 2em;
+    padding-left: 10px;
+    margin-top: 0px;
+    color: #777
+}
+.zoomModal .projectDetails .wireBtn {
+	margin-top: 24%;
+}
