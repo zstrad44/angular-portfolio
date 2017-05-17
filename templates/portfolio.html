@@ -28,13 +28,12 @@
         </div>
     </section>
 
-
     <div class="modalBox" >
         <div class="modal fade zoomModal" ng-repeat="project in mainProjects | orderBy:'id'" id="zoomModal{{project.modalId}}" role="dialog">
-            <div class="modal-dialog modal-lg">
+            <div class="modal-dialog big-modal">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <button type="button" class="close" data-dismiss="modal" ng-mouseover="message = 'Close'" ng-mouseleave="message = '&times;'" ng-init="message = '&times;'"   >{{message}}</button>
                         <h4 class="modal-title"><i class="fa fa-code"></i> {{project.name}}</h4>
                     </div>
                     <div class="modal-body">
@@ -50,7 +49,8 @@
                                     <p>{{project.details}}</p>
                                 </div>
                                 <div class="col-xs-12 col-lg-3">
-                                    <a ui-sref="{{project.link}}" class="btn btn-lg wireBtn wireBtnBlue">View the Case Study</a>
+                                    <a ui-sref="{{project.link}}" class="btn btn-lg wireBtn wireBtnBlue btn-block">View the Case Study</a>
+                                    <a  ng-if="project.openSource" href="{{project.github}}" class="btn btn-lg wireBtn wireBtnBlue btn-block" target="_blank"><i class="fa fa-github"></i>&nbsp; View Code</a>
                                 </div>
                             </div>
                         </div>

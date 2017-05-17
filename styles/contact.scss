@@ -1,0 +1,47 @@
+@import "utilities/colors.scss";
+
+#contact {
+  margin-bottom: 0;
+  h1 {
+    margin: 0;
+  }
+  .formBox {
+    height: auto;
+    text-align: left;
+    overflow: auto;
+    .form-control {
+      border-radius: 0;
+    }
+  }
+  .contactInfoCard {
+    text-align: left;
+    font-size: 1.3em;
+    .list-group {
+      margin-bottom: 0;
+      a.list-group-item {
+        border-color: transparent;
+        transition: .35s ease;
+        &:hover {
+          background-color: #1b75b9;
+          color: #ffffff;
+          border-collapse: collapse;
+          .fa {
+            background-color: #1b75b9;
+            color: #ffffff;
+            border-collapse: collapse;
+          }
+        }
+      }
+    }
+  }
+}
+
+.list-group-item {
+  &:first-child, &:last-child {
+    border-radius: 0;
+  }
+}
+
+#contact .contactInfoCard .list-group a.list-group-item .fa {
+  color: #1b75b9;
+}

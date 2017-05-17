@@ -1,93 +1,111 @@
 /*PAGE HERO*/
 .hero-bg {
-    box-shadow: 0 -10px 10px -10px #2C3E50;
-    background: radial-gradient(to top, #54a1da 2%, #1b75b9 20%); /*Standard*/
-    background-position: center;
-    background-blend-mode: color;
+  box-shadow: 0 -10px 10px -10px #2C3E50;
+  background: radial-gradient(to top, #33b5e5 2%, #1b75b9 20%);
+  /*Standard*/
+  background-position: center;
+  background-blend-mode: color;
 }
+
 .gray-gradient {
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#888888+0,555555+100 */
-    background: #888888; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
-    background: radial-gradient(ellipse at center,  #888888 0%,#555555 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#888888', endColorstr='#555555',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/$gray+0,555555+100 */
+  background: #808080;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #808080 0%, #555555 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gray', endColorstr='$gray-dark',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
 }
+
 .hero-main {
-	padding: 75px 0;
+  padding: 75px 0;
 }
+
 .heroImgBox {
-text-align: center;
+  text-align: center;
 }
+
 .heroImgBox img {
-	height: 300px;
-    text-align: center;
-    margin: 0 auto;
-    -webkit-filter: drop-shadow(2px 2px 2px rgba(199,199,199,0.5));
+  height: 300px;
+  text-align: center;
+  margin: 0 auto;
+  -webkit-filter: drop-shadow(2px 2px 2px rgba(199, 199, 199, 0.5));
 }
+
 .heroTextBox {
-	margin-top: 50px;
+  margin-top: 50px;
 }
+
 .heroTextBox .heroName {
-	font-size: 4em;
+  font-size: 4em;
 }
+
 .heroSubtext {
-font-size: 2.5em;
+  font-size: 2.5em;
 }
 
 .heroCards {
-	height: 400px;
+  height: 400px;
 }
+
 .heroCards a .card {
   transition: .4s ease;
 }
+
 .heroCards a:hover .card {
-  box-shadow: 0 0 5px rgba(0,0,0,.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   background-color: #555555;
   border-width: 1px;
 }
+
 .heroCards a:hover .card h2, .heroCards a:hover .card i {
   color: #ffffff;
 }
+
 .heroCards .card .cardIcon {
-    color: #55585A;
-    font-size: 3.5em;
+  color: #555555;
+  font-size: 3.5em;
 }
-@media(max-width:768px) {
+
+@media (max-width: 768px) {
   .heroCards .card h2 {
-          display: -webkit-box;
-          margin: 0;
+    display: -webkit-box;
+    margin: 0;
   }
   .heroCards .card i {
     width: 50px;
   }
   .hero-main {
-  	padding: 35px 0;
+    padding: 35px 0;
   }
   .heroImgBox {
-  text-align: center;
+    text-align: center;
   }
   .heroImgBox img {
-  	height: 200px;
-      text-align: center;
-      margin: 0 auto;
-      -webkit-filter: drop-shadow(2px 2px 2px rgba(199,199,199,0.5));
+    height: 200px;
+    text-align: center;
+    margin: 0 auto;
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(199, 199, 199, 0.5));
   }
   .heroTextBox {
-  	margin-top: 40px;
+    margin-top: 40px;
   }
   .heroTextBox .heroName {
-  	font-size: 2.3em;
+    font-size: 2.3em;
   }
   .heroSubtext {
-  font-size: 2em;
+    font-size: 2em;
   }
   .heroCards {
-  	height: 400px;
+    height: 400px;
   }
   .heroCards a .card {
     transition: .4s ease;
   }
   .heroCards a:hover .card {
-    box-shadow: 0 0 5px rgba(0,0,0,.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     background-color: #555555;
     border-width: 1px;
   }

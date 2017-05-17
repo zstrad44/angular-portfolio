@@ -1,0 +1,150 @@
+@import "utilities/colors.scss";
+
+#skills .card {
+  padding: 0 5px;
+  border: none;
+  overflow: visible;
+}
+
+.skillsBtns {
+  margin: -10px 0 -12px -10px;
+  .list-group-item {
+    color: $gray-dark;
+    height: auto;
+    font-size: 1.2em;
+    padding-top: 8%;
+    color: $gray-dark;
+    background: #ffffff;
+    /* Old Browsers */
+    /*Safari 5.1-6*/
+    /*Opera 11.1-12*/
+    /*Fx 3.6-15*/
+    background: radial-gradient(ellipse at bottom, #ffffff, #f9f9f9);
+    /*Standard*/
+    cursor: pointer !important;
+    &:hover {
+      background: #777777;
+      color: #ffffff;
+    }
+    &.active {
+      background: $gray-dark !important;
+      cursor: pointer !important;
+      color: #ffffff;
+      &:hover, &:focus {
+        background: $gray-dark !important;
+        cursor: pointer !important;
+        color: #ffffff;
+      }
+    }
+    &:first-child, &:last-child {
+      height: auto;
+      background: $primary;
+      color: #ffffff;
+      font-size: 1em;
+      padding-top: 8px;
+    }
+  }
+}
+
+.skillsBox {
+  text-align: left;
+  h2 {
+    margin: 0 0 10px;
+    font-size: 2em;
+    color: $gray;
+  }
+  .skillTag {
+    padding: 3px 10px;
+    background-color: $gray-dark;
+    color: #ffffff;
+    margin: 10px 3px;
+    font-size: 1.2em;
+    line-height: 1.8;
+  }
+  .keySkill {
+    background-color: $primary;
+  }
+}
+
+.keyTagBox {
+  position: absolute;
+  right: 10px;
+  .keyTag {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .keyTagBox {
+    top: -65px;
+  }
+}
+
+.box {
+  background-color: $gray-dark;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  margin: 0 -5px;
+}
+
+.boxSmall {
+  background-color: #aaa;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  margin: 0 -5px  10px;
+}
+
+.box h2, .boxSmall h3 {
+  margin: 0;
+}
+
+.outerIconBox {
+  /*padding: 3px;*/
+  height: 100px;
+}
+
+.iconBox {
+  width: auto;
+  margin: 0 auto;
+  padding: 10px 5px;
+  border: 2px solid $primary;
+}
+
+.mainSkill {
+  background-color: $primary;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.iconBox h3 {
+  font-size: 1.5em;
+  text-align: center;
+  margin: 0;
+}
+
+@media (min-width: 1000px) {
+  #skills .card {
+    padding: 0;
+    border: none;
+  }
+  .box {
+    margin: 0;
+  }
+  .boxSmall {
+    margin: 0 0 10px;
+  }
+  .iconBox {
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px 5px;
+    border: 2px solid $primary;
+  }
+  .skillsBtns .list-group-item {
+    height: 70px;
+    &:first-child, &:last-child {
+      height: 40px;
+    }
+  }
+}

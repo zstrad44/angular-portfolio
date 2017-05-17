@@ -1,0 +1,173 @@
+@import "utilities/colors.scss";
+
+.navbar {
+  min-height: 75px;
+  background-color: #f1f1f1;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-nav {
+  > li {
+    > a {
+      background-color: $gray-dark;
+      color: #fff;
+      transition: .3s ease;
+      border: 1px solid $gray-light;
+      border-width: 0 1px;
+    }
+    &:first-child a {
+      border-left-width: 0;
+    }
+    &:last-child a {
+      border-right-width: 0;
+    }
+    > a:hover {
+      background-color: $gray-light;
+      color: $gray-dark;
+    }
+  }
+  border: 1px solid $gray-dark;
+  border-width: 0 1px 1px 1px;
+}
+
+.navbar .navbar-brand {
+  padding: 15px 10px;
+  img {
+    height: 60px;
+    margin-top: -9px;
+  }
+}
+
+.navbar-nav > li > a i {
+  width: 25px;
+}
+
+@media (min-width: 1200px) {
+  .navbar .navbar-brand {
+    padding: 15px 0;
+  }
+  .navbar-nav > li > a {
+    i {
+      display: none;
+      position: absolute;
+      bottom: -20px;
+      width: 30%;
+      height: auto;
+      left: 35%;
+      color: $gray-dark;
+      text-align: center;
+      transition: .4s ease;
+    }
+    &:hover i {
+      display: block;
+      position: absolute;
+      bottom: -20px;
+      width: 30%;
+      height: auto;
+      left: 35%;
+      color: $gray-dark;
+      text-align: center;
+    }
+  }
+}
+
+/*MOBILE MENU STYLES*/
+@media (max-width: 1000px) {
+  .navbar-nav > li > a {
+    border-width: 0;
+  }
+  .navbar .navbar-collapse {
+    background-color: $gray-dark;
+    padding-top: 0;
+    border-top: 2px solid #bbb;
+    box-shadow: 0 10px 10px -10px #2C3E50;
+    margin-top: 25px;
+    ul {
+      padding: 0 5px;
+      margin-top: 0;
+      li {
+        padding-left: 10px;
+        .main-btn {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .navbar-toggle {
+    border-radius: 0;
+  }
+  .burger {
+    border: none;
+    padding: 0;
+    background: $gray-dark !important;
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    outline: 0;
+    z-index: +500000;
+    span {
+      display: block;
+      background: #fff;
+      height: 4px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      &:before, &:after {
+        display: block;
+        background: #fff;
+        height: 4px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+      width: 80%;
+      top: 0;
+      bottom: 0;
+      transition: background 0s .2s;
+      &:before, &:after {
+        content: '';
+        width: 100%;
+        transition-duration: .2s,.2s;
+        transition-delay: .2s, 0s;
+        transition-timing-function: ease-in, ease-out;
+      }
+      &:before {
+        transition-property: top, -webkit-transform;
+        transition-property: top, transform;
+        transition-property: top, transform, -webkit-transform;
+        top: -10px;
+      }
+      &:after {
+        transition-property: bottom, -webkit-transform;
+        transition-property: bottom, transform;
+        transition-property: bottom, transform, -webkit-transform;
+        bottom: -10px;
+      }
+    }
+  }
+  button.burgerButton.active span {
+    background: 0 0;
+  }
+  .burger.active span {
+    &:before, &:after {
+      transition-delay: 0s, .2s;
+    }
+    &:before {
+      top: 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    &:after {
+      bottom: 0;
+      -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+  }
+}

@@ -1,3 +1,5 @@
+@import "utilities/colors.scss";
+
 /****TABLE OF CONTENTS****/
 /*TEXT FORMATING*/
 /*COLORS*/
@@ -5,24 +7,29 @@
 /*BACKGROUND-COLORS*/
 /*BACKGROUND-IMAGES*/
 /*GRADIENTS*/
+
 /*BUTTONS*/
 /*WIRE BUTTONS*/
 /*SQUARE BUTTONS*/
+
 /*BOX-SHADOWS*/
+
 /****END TABLE OF CONTENTS****/
+
 /*TEXT FORMATING*/
+
 a {
   text-decoration: none !important;
-}
-
-a:hover {
-  text-decoration: none !important;
+  &:hover {
+    text-decoration: none !important;
+  }
 }
 
 /*COLORS*/
 /* START TEXT-COLORS*/
+
 .text-blue {
-  color: #1b75b9 !important;
+  color: $primary!important;
 }
 
 .text-white {
@@ -30,15 +37,15 @@ a:hover {
 }
 
 .text-gray {
-  color: #555555 !important;
+  color: $gray-dark !important;
 }
 
 .text-green {
-  color: #00C851;
+  color: $success;
 }
 
 .text-red {
-  color: #ff3333;
+  color: $danger;
 }
 
 .text-purple {
@@ -46,20 +53,23 @@ a:hover {
 }
 
 /*END TEXT-COLORS*/
+
 /********************************/
 /*/////////////////////////////*/
 /********************************/
+
 /*START BACKGROUND-COLORS*/
+
 .bg-blue {
-  background-color: #1b75b9;
+  background-color: $primary;
 }
 
 .bg-green {
-  background-color: #00C851;
+  background-color: $success;
 }
 
 .bg-red {
-  background-color: #ff3333;
+  background-color: $danger;
 }
 
 .bg-white {
@@ -71,34 +81,37 @@ a:hover {
 }
 
 .bg-lightGray {
-  background-color: #fafafa;
+  background-color: $gray-lightest;
 }
 
 .bg-gray {
-  background-color: #555555;
+  background-color: $gray-dark;
 }
 
 /*END BACKGROUND-COLORS*/
+
 /********************************/
 /*/////////////////////////////*/
 /********************************/
+
 /*START GRADIENTS*/
+
 .blue-gradient {
   box-shadow: 0 -10px 10px -10px #2C3E50;
-  background: #2c74e8;
-  background: radial-gradient(ellipse at center, #2c74e8 0%, #0068b3 100%);
+  background: rgba(44, 116, 232, 1);
+  background: radial-gradient(ellipse at center, rgba(44, 116, 232, 1) 0%, rgba(0, 104, 179, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c74e8', endColorstr='$primary', GradientType=1 );
   background-position: center;
   background-blend-mode: color;
 }
 
 .newBlue-gradient {
-  background: #33b5e5;
+  background: $info;
   /* Old Browsers */
   /*Safari 5.1-6*/
   /*Opera 11.1-12*/
   /*Fx 3.6-15*/
-  background: radial-gradient(to top, #33b5e5 2%, #1b75b9 20%);
+  background: radial-gradient(to top, $info 2%, $primary 20%);
   /*Standard*/
 }
 
@@ -112,16 +125,19 @@ a:hover {
 
 .gray-gradient {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/$gray+0,555555+100 */
-  background: #808080;
-  background: radial-gradient(ellipse at center, #808080 0%, #555555 100%);
+  background: $gray;
+  background: radial-gradient(ellipse at center, $gray 0%, $gray-dark 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gray', endColorstr='$gray-dark',GradientType=1 );
 }
 
 /*END GRADIENTS*/
+
 /********************************/
 /*/////////////////////////////*/
 /********************************/
+
 /*START BACKGROUND-IMAGES*/
+
 .bg-texture {
   background-image: url(/assets/backgrounds/poly_bg_1920x1080.png);
 }
@@ -131,54 +147,58 @@ a:hover {
 }
 
 /*END BACKGROUND-IMAGES*/
+
 /********************************/
 /*/////////////////////////////*/
 /********************************/
+
 /*BUTTONS*/
 /*START WIRE BUTTONS*/
+
 .wireBtn {
   box-sizing: border-box;
   transition: .3s ease;
   border-width: 1px;
   border-radius: 0;
   background-color: transparent;
+  &:hover {}
 }
 
 .wireBtnWhite {
   color: #fff;
   border-color: #fff;
-}
-
-.wireBtnWhite:hover {
-  color: #1b75b9;
-  background-color: #fff;
+  &:hover {
+    color: $primary;
+    background-color: #fff;
+  }
 }
 
 .wireBtnBlue {
-  color: #1b75b9;
-  border-color: #1b75b9;
-}
-
-.wireBtnBlue:hover {
-  color: #fff;
-  background-color: #1b75b9;
+  color: $primary;
+  border-color: $primary;
+  &:hover {
+    color: #fff;
+    background-color: $primary;
+  }
 }
 
 .wireBtnGray {
-  color: #555555;
-  border-color: #555555;
-}
-
-.wireBtnGray:hover {
-  color: #fff;
-  background-color: #555555;
+  color: $gray-dark;
+  border-color: $gray-dark;
+  &:hover {
+    color: #fff;
+    background-color: $gray-dark;
+  }
 }
 
 /*END WIRE BUTTONS*/
+
 /********************************/
 /*/////////////////////////////*/
 /********************************/
+
 /*START SQUARE BUTTONS*/
+
 .squareBtn {
   transition: .3s ease;
   border-width: 1px;
@@ -188,43 +208,44 @@ a:hover {
 
 .squareBtnBlue {
   color: #fff;
-  border-color: #1b75b9;
-  background-color: #1b75b9;
-}
-
-.squareBtnBlue:hover {
-  color: #1b75b9;
-  background-color: transparent;
+  border-color: $primary;
+  background-color: $primary;
+  &:hover {
+    color: $primary;
+    background-color: transparent;
+  }
 }
 
 .squareBtnWhite {
-  color: #555555;
+  color: $gray-dark;
   border-color: #fff;
   background-color: #fff;
-}
-
-.squareBtnWhite:hover {
-  color: #fff;
-  background-color: transparent;
+  &:hover {
+    color: #fff;
+    background-color: transparent;
+  }
 }
 
 .squareBtnGray {
   color: #fff;
-  border-color: #555555;
-  background-color: #555555;
-}
-
-.squareBtnGray:hover {
-  color: #555555;
-  background-color: transparent;
+  border-color: $gray-dark;
+  background-color: $gray-dark;
+  &:hover {
+    color: $gray-dark;
+    background-color: transparent;
+  }
 }
 
 /*END SQUARE BUTTONS*/
+
 /********************************/
 /*/////////////////////////////*/
 /********************************/
+
 /*START BOX-SHADOWS*/
+
 /*  CSS Spec:  | style | offset-x | offset-y | blur-radius | spread-radius | color */
+
 .top {
   box-shadow: 0 -10px 10px -10px #2C3E50;
 }
@@ -285,33 +306,34 @@ a:hover {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
-.lifted:before {
-  bottom: 15px;
-  left: 10px;
-  width: 50%;
-  height: 20%;
-  max-width: 300px;
-  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
-  -webkit-transform: rotate(-3deg);
-  -ms-transform: rotate(-3deg);
-  transform: rotate(-3deg);
-}
-
-.lifted:after {
-  bottom: 15px;
-  left: 10px;
-  width: 50%;
-  height: 20%;
-  max-width: 300px;
-  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
-  -webkit-transform: rotate(-3deg);
-  -ms-transform: rotate(-3deg);
-  transform: rotate(-3deg);
-  right: 10px;
-  left: auto;
-  -webkit-transform: rotate(3deg);
-  -ms-transform: rotate(3deg);
-  transform: rotate(3deg);
+.lifted {
+  &:before {
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    height: 20%;
+    max-width: 300px;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+    -webkit-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+  }
+  &:after {
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    height: 20%;
+    max-width: 300px;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+    -webkit-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+    right: 10px;
+    left: auto;
+    -webkit-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
 }
 
 /*END BOX-SHADOWS*/

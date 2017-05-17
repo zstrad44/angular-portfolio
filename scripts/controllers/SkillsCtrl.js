@@ -23,13 +23,13 @@ angular
       {
         id: 2,
         name: 'HTML5',
-        mainSkill: true,
+        mainSkill: false,
         level: ''
       },
       {
         id: 3,
         name: 'CSS',
-        mainSkill: true,
+        mainSkill: false,
         level: ''
       },
       {
@@ -107,7 +107,7 @@ angular
       {
         id: 1,
         name: 'Git',
-        mainSkill: true,
+        mainSkill: false,
         level: ''
       },
       {
@@ -118,14 +118,20 @@ angular
       },
       {
         id: 3,
-        name: 'Linux',
-        mainSkill: true,
+        name: 'Command Line',
+        mainSkill: false,
         level: ''
       },
       {
         id: 4,
+        name: 'Linux',
+        mainSkill: false,
+        level: ''
+      },
+      {
+        id: 5,
         name: 'Adobe CC',
-        mainSkill: true,
+        mainSkill: false,
         level: ''
       }
     ];
