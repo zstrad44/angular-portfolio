@@ -3,7 +3,10 @@
 /*PAGE HERO*/
 
 .hero-bg {
-  box-shadow: 0 -10px 10px -10px #2C3E50;
+  -webkit-box-shadow: 0 -10px 10px -10px #2C3E50;
+          box-shadow: 0 -10px 10px -10px #2C3E50;
+  background: -webkit-radial-gradient(bottom, $info 2%, $primary 20%);
+  background: -o-radial-gradient(bottom, $info 2%, $primary 20%);
   background: radial-gradient(to top, $info 2%, $primary 20%);
   /*Standard*/
   background-position: center;
@@ -16,6 +19,8 @@
   /* Old browsers */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-radial-gradient(center ellipse, $gray 0%, $gray-dark 100%);
+  background: -o-radial-gradient(center ellipse, $gray 0%, $gray-dark 100%);
   background: radial-gradient(ellipse at center, $gray 0%, $gray-dark 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gray', endColorstr='$gray-dark',GradientType=1 );
@@ -51,10 +56,13 @@
   height: 400px;
   a {
     .card {
+      -webkit-transition: .4s ease;
+      -o-transition: .4s ease;
       transition: .4s ease;
     }
     &:hover .card {
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+              box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
       background-color: $gray-dark;
       border-width: 1px;
       h2, i {
@@ -103,10 +111,13 @@
     height: 400px;
     a {
       .card {
+        -webkit-transition: .4s ease;
+        -o-transition: .4s ease;
         transition: .4s ease;
       }
       &:hover .card {
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
         background-color: $gray-dark;
         border-width: 1px;
         h2, i {

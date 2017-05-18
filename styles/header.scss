@@ -3,7 +3,8 @@
 .navbar {
   min-height: 75px;
   background-color: #f1f1f1;
-  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 2px 0 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 0 4px rgba(0, 0, 0, 0.5);
 }
 
 .navbar-nav {
@@ -11,6 +12,8 @@
     > a {
       background-color: $gray-dark;
       color: #fff;
+      -webkit-transition: .3s ease;
+      -o-transition: .3s ease;
       transition: .3s ease;
       border: 1px solid $gray-light;
       border-width: 0 1px;
@@ -56,6 +59,8 @@
       left: 35%;
       color: $gray-dark;
       text-align: center;
+      -webkit-transition: .4s ease;
+      -o-transition: .4s ease;
       transition: .4s ease;
     }
     &:hover i {
@@ -80,7 +85,8 @@
     background-color: $gray-dark;
     padding-top: 0;
     border-top: 2px solid #bbb;
-    box-shadow: 0 10px 10px -10px #2C3E50;
+    -webkit-box-shadow: 0 10px 10px -10px #2C3E50;
+            box-shadow: 0 10px 10px -10px #2C3E50;
     margin-top: 25px;
     ul {
       padding: 0 5px;
@@ -128,22 +134,34 @@
       width: 80%;
       top: 0;
       bottom: 0;
+      -webkit-transition: background 0s .2s;
+      -o-transition: background 0s .2s;
       transition: background 0s .2s;
       &:before, &:after {
         content: '';
         width: 100%;
-        transition-duration: .2s,.2s;
-        transition-delay: .2s, 0s;
-        transition-timing-function: ease-in, ease-out;
+        -webkit-transition-duration: .2s,.2s;
+             -o-transition-duration: .2s,.2s;
+                transition-duration: .2s,.2s;
+        -webkit-transition-delay: .2s, 0s;
+             -o-transition-delay: .2s, 0s;
+                transition-delay: .2s, 0s;
+        -webkit-transition-timing-function: ease-in, ease-out;
+             -o-transition-timing-function: ease-in, ease-out;
+                transition-timing-function: ease-in, ease-out;
       }
       &:before {
         transition-property: top, -webkit-transform;
+        -webkit-transition-property: top, -webkit-transform;
+        -o-transition-property: top, transform;
         transition-property: top, transform;
         transition-property: top, transform, -webkit-transform;
         top: -10px;
       }
       &:after {
         transition-property: bottom, -webkit-transform;
+        -webkit-transition-property: bottom, -webkit-transform;
+        -o-transition-property: bottom, transform;
         transition-property: bottom, transform;
         transition-property: bottom, transform, -webkit-transform;
         bottom: -10px;
@@ -155,7 +173,9 @@
   }
   .burger.active span {
     &:before, &:after {
-      transition-delay: 0s, .2s;
+      -webkit-transition-delay: 0s, .2s;
+           -o-transition-delay: 0s, .2s;
+              transition-delay: 0s, .2s;
     }
     &:before {
       top: 0;

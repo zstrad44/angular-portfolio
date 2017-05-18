@@ -9,11 +9,6 @@ angular
      "&lt; Zach Stradling /&gt;" ];
      $scope.secondLines = ["Full Stack Developer"];
 
-
-     
-
-
-
     $(function(){
       $(".heroName").typed({
         strings:$scope.firstLines,

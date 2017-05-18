@@ -1,0 +1,63 @@
+
+<div ng-controller="PortfolioCtrl">
+    <section class="mainSection " id="portfolio">
+        <div class="container-fuid sectionContainer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 sectionHeadBox">
+                        <div class="cardBox sectionHead">
+                            <h1><i class="fa fa-code"></i> &nbsp; Portfolio:</h1>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 sectionBody">
+                        <div class="row" id="screenshotCardBox">
+                            <div class="col-xs-12 col-lg-4" ng-repeat="project in mainProjects | orderBy:'id'">
+                                <div class="card screenShot">
+                                    <img src="/assets/screenshots/{{project.img}}" alt="{{project.altText}}" class="img-responsive">
+                                    <div class="overlayBox">
+                                        <div class="overlay">
+                                            <button class="btn btn-lg wireBtn wireBtnWhite" data-toggle="modal" data-target="#zoomModal{{project.modalId}}">See More</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/portfolio/web-applications.html" class="btn btn-block btn-lg squareBtn squareBtnBlue">View All</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modalBox" >
+        <div class="modal fade zoomModal" ng-repeat="project in mainProjects | orderBy:'id'" id="zoomModal{{project.modalId}}" role="dialog">
+            <div class="modal-dialog big-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" ng-mouseover="message = 'Close'" ng-mouseleave="message = '&times;'" ng-init="message = '&times;'"   >{{message}}</button>
+                        <h4 class="modal-title"><i class="fa fa-code"></i> {{project.name}}</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="screenshot">
+                                    <img src="/assets/screenshots/{{project.img}}" alt="{{project.altText}}" class="img-responsive">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 projectDetails">
+                                <div class="col-xs-12 col-lg-9">
+                                    <h3>{{project.title}}</h3>
+                                    <p>{{project.details}}</p>
+                                </div>
+                                <div class="col-xs-12 col-lg-3">
+                                    <a ui-sref="{{project.link}}" class="btn btn-lg wireBtn wireBtnBlue btn-block">View the Case Study</a>
+                                    <a  ng-if="project.openSource" href="{{project.github}}" class="btn btn-lg wireBtn wireBtnBlue btn-block" target="_blank"><i class="fa fa-github"></i>&nbsp; View Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

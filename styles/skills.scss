@@ -19,6 +19,8 @@
     /*Safari 5.1-6*/
     /*Opera 11.1-12*/
     /*Fx 3.6-15*/
+    background: -webkit-radial-gradient(bottom, ellipse, #ffffff, #f9f9f9);
+    background: -o-radial-gradient(bottom, ellipse, #ffffff, #f9f9f9);
     background: radial-gradient(ellipse at bottom, #ffffff, #f9f9f9);
     /*Standard*/
     cursor: pointer !important;

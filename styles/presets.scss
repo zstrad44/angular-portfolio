@@ -97,8 +97,11 @@ a {
 /*START GRADIENTS*/
 
 .blue-gradient {
-  box-shadow: 0 -10px 10px -10px #2C3E50;
+  -webkit-box-shadow: 0 -10px 10px -10px #2C3E50;
+          box-shadow: 0 -10px 10px -10px #2C3E50;
   background: rgba(44, 116, 232, 1);
+  background: -webkit-radial-gradient(center ellipse, rgba(44, 116, 232, 1) 0%, rgba(0, 104, 179, 1) 100%);
+  background: -o-radial-gradient(center ellipse, rgba(44, 116, 232, 1) 0%, rgba(0, 104, 179, 1) 100%);
   background: radial-gradient(ellipse at center, rgba(44, 116, 232, 1) 0%, rgba(0, 104, 179, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c74e8', endColorstr='$primary', GradientType=1 );
   background-position: center;
@@ -111,6 +114,8 @@ a {
   /*Safari 5.1-6*/
   /*Opera 11.1-12*/
   /*Fx 3.6-15*/
+  background: -webkit-radial-gradient(bottom, $info 2%, $primary 20%);
+  background: -o-radial-gradient(bottom, $info 2%, $primary 20%);
   background: radial-gradient(to top, $info 2%, $primary 20%);
   /*Standard*/
 }
@@ -118,14 +123,20 @@ a {
 .light-gray-gradient {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f6f6f6+47,ededed+100;White+3D+%231 */
   background: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(47%, #f6f6f6), to(#ededed));
+  background: -webkit-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  background: -o-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
   background: linear-gradient(to bottom, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 );
-  box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 .gray-gradient {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/$gray+0,555555+100 */
   background: $gray;
+  background: -webkit-radial-gradient(center ellipse, $gray 0%, $gray-dark 100%);
+  background: -o-radial-gradient(center ellipse, $gray 0%, $gray-dark 100%);
   background: radial-gradient(ellipse at center, $gray 0%, $gray-dark 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gray', endColorstr='$gray-dark',GradientType=1 );
 }
@@ -156,7 +167,10 @@ a {
 /*START WIRE BUTTONS*/
 
 .wireBtn {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: .3s ease;
+  -o-transition: .3s ease;
   transition: .3s ease;
   border-width: 1px;
   border-radius: 0;
@@ -200,6 +214,8 @@ a {
 /*START SQUARE BUTTONS*/
 
 .squareBtn {
+  -webkit-transition: .3s ease;
+  -o-transition: .3s ease;
   transition: .3s ease;
   border-width: 1px;
   border-style: solid;
@@ -247,63 +263,78 @@ a {
 /*  CSS Spec:  | style | offset-x | offset-y | blur-radius | spread-radius | color */
 
 .top {
-  box-shadow: 0 -10px 10px -10px #2C3E50;
+  -webkit-box-shadow: 0 -10px 10px -10px #2C3E50;
+          box-shadow: 0 -10px 10px -10px #2C3E50;
 }
 
 .right {
-  box-shadow: 10px 0 10px -10px #2C3E50;
+  -webkit-box-shadow: 10px 0 10px -10px #2C3E50;
+          box-shadow: 10px 0 10px -10px #2C3E50;
 }
 
 .bottom {
-  box-shadow: 0 10px 10px -10px #2C3E50;
+  -webkit-box-shadow: 0 10px 10px -10px #2C3E50;
+          box-shadow: 0 10px 10px -10px #2C3E50;
 }
 
 .left {
-  box-shadow: -10px 0 10px -10px #2C3E50;
+  -webkit-box-shadow: -10px 0 10px -10px #2C3E50;
+          box-shadow: -10px 0 10px -10px #2C3E50;
 }
 
 .all {
-  box-shadow: 0 0 10px #2C3E50;
+  -webkit-box-shadow: 0 0 10px #2C3E50;
+          box-shadow: 0 0 10px #2C3E50;
 }
 
 .inset-top {
-  box-shadow: inset 0 10px 10px -10px #2C3E50;
+  -webkit-box-shadow: inset 0 10px 10px -10px #2C3E50;
+          box-shadow: inset 0 10px 10px -10px #2C3E50;
 }
 
 .inset-right {
-  box-shadow: inset -10px 0 10px -10px #2C3E50;
+  -webkit-box-shadow: inset -10px 0 10px -10px #2C3E50;
+          box-shadow: inset -10px 0 10px -10px #2C3E50;
 }
 
 .inset-bottom {
-  box-shadow: inset 0 -10px 10px -10px #2C3E50;
+  -webkit-box-shadow: inset 0 -10px 10px -10px #2C3E50;
+          box-shadow: inset 0 -10px 10px -10px #2C3E50;
 }
 
 .inset-left {
-  box-shadow: inset 10px 0 10px -10px #2C3E50;
+  -webkit-box-shadow: inset 10px 0 10px -10px #2C3E50;
+          box-shadow: inset 10px 0 10px -10px #2C3E50;
 }
 
 .inset-all {
-  box-shadow: inset 0 0 10px #2C3E50;
+  -webkit-box-shadow: inset 0 0 10px #2C3E50;
+          box-shadow: inset 0 0 10px #2C3E50;
 }
 
 .left-right {
-  box-shadow: -10px 0 10px -10px #2C3E50, 10px 0 10px -10px #2C3E50;
+  -webkit-box-shadow: -10px 0 10px -10px #2C3E50, 10px 0 10px -10px #2C3E50;
+          box-shadow: -10px 0 10px -10px #2C3E50, 10px 0 10px -10px #2C3E50;
 }
 
 .top-bottom {
-  box-shadow: 0 -7px 7px -7px #2C3E50, 0 7px 7px -7px #2C3E50;
+  -webkit-box-shadow: 0 -7px 7px -7px #2C3E50, 0 7px 7px -7px #2C3E50;
+          box-shadow: 0 -7px 7px -7px #2C3E50, 0 7px 7px -7px #2C3E50;
 }
 
 .inset-left-right {
-  box-shadow: inset 10px 0 10px -10px #2C3E50, inset -10px 0 10px -10px #2C3E50;
+  -webkit-box-shadow: inset 10px 0 10px -10px #2C3E50, inset -10px 0 10px -10px #2C3E50;
+          box-shadow: inset 10px 0 10px -10px #2C3E50, inset -10px 0 10px -10px #2C3E50;
 }
 
 .inset-top-bottom {
-  box-shadow: inset 0 7px 7px -7px #2C3E50, inset 0 -7px 7px -7px #2C3E50;
+  -webkit-box-shadow: inset 0 7px 7px -7px #2C3E50, inset 0 -7px 7px -7px #2C3E50;
+          box-shadow: inset 0 7px 7px -7px #2C3E50, inset 0 -7px 7px -7px #2C3E50;
 }
 
 .dropshadow {
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
 .lifted {
@@ -313,7 +344,8 @@ a {
     width: 50%;
     height: 20%;
     max-width: 300px;
-    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
     -webkit-transform: rotate(-3deg);
     -ms-transform: rotate(-3deg);
     transform: rotate(-3deg);
@@ -324,7 +356,8 @@ a {
     width: 50%;
     height: 20%;
     max-width: 300px;
-    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
     -webkit-transform: rotate(-3deg);
     -ms-transform: rotate(-3deg);
     transform: rotate(-3deg);

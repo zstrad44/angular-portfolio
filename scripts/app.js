@@ -8,7 +8,7 @@ angular
   .config(['$urlRouterProvider', '$stateProvider', '$locationProvider', 'ngMetaProvider', function($urlRouterProvider, $stateProvider, $locationProvider, ngMetaProvider) {
     // Remove hashbang
     $locationProvider.html5Mode({
-        enabled: false,
+        enabled: true,
         requireBase: true,
         rewriteLinks: false,
     });
@@ -52,6 +52,13 @@ angular
         templateUrl: '/templates/skills.html',
         controller: 'SkillsCtrl'
       })
+      // .state('portfolioMaster', {
+      //   //url: '/',
+      //   templateUrl: '/templates/portfolioMaster.html',
+      //   abstract: true,
+      //   controller: 'PortfolioMasterCtrl',
+      //   parent: 'master'
+      // })
       .state('portfolio', {
         url: '/portfolio',
         parent: 'master',
@@ -65,8 +72,8 @@ angular
         controller: 'ContactCtrl'
       });
 
-      // $locationProvider.html5Mode(true);
+      $locationProvider.html5Mode(true);
   }])
   .run(['ngMeta', function(ngMeta) {
-         ngMeta.init();
-     }]);
+        ngMeta.init();
+    }]);

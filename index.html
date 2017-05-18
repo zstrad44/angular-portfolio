@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
+
     <!-- Meta-Information -->
     <meta charset="utf-8">
     <title>Zach Stradling | Software Engineer </title>
     <meta property="og:title" content="{{ngMeta.title}}" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="description" content="Get help from a personal injury law firm in Phoenix. Contact a personal injury and accident attorney in Arizona at Goldman Accident Lawyers.">
+    <meta name="description" content="Software Engineer in Tempe Arizona, Full Stack web developer, Ruby on Rails, AngularJS, HTML5, SCSS">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- <base href="/"> -->
+    <base href="/">
     <!-- Bootstrap CSS CDN 3.2.0-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <!-- FontAwesome 4.7.0 CDN-->
@@ -19,19 +19,17 @@
         <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet"> -->
         <link href="https://fonts.googleapis.com/css?family=Ubuntu:400" rel="stylesheet">
     <!-- Custom Website CSS Styles -->
-    <link rel="stylesheet" href="/styles/presets.css">
-    <link rel="stylesheet" href="/styles/master.css">
-    <link rel="stylesheet" href="/styles/header.css">
-    <link rel="stylesheet" href="/styles/home.css">
-    <link rel="stylesheet" href="/styles/about.css">
-    <link rel="stylesheet" href="/styles/skills.css">
-    <link rel="stylesheet" href="/styles/contact.css">
-    <link rel="stylesheet" href="/styles/portfolio.css">
+    <link rel="stylesheet" href="/styles/minified/presets.min.css">
+    <link rel="stylesheet" href="/styles/minified/master.min.css">
+    <link rel="stylesheet" href="/styles/minified/header.min.css">
+    <link rel="stylesheet" href="/styles/minified/home.min.css">
+    <link rel="stylesheet" href="/styles/minified/about.min.css">
+    <link rel="stylesheet" href="/styles/minified/skills.min.css">
+    <link rel="stylesheet" href="/styles/minified/contact.min.css">
+    <link rel="stylesheet" href="/styles/minified/portfolio.min.css">
 </head>
 <body data-ng-app="portApp">
-
         <ui-view></ui-view>
-
     <!--jQuery 3.1.1 CDN-->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <!--Bootstrap JS 3.2.0 CDN-->
@@ -57,12 +55,13 @@
     <!-- Google Maps API -->
     <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGd0vd9VJEo7h3LfiS53wa_zG6ktUEYZk&libraries=places"></script> -->
     <!-- CONTROLLERS -->
-    <script src="/scripts/controllers/MasterCtrl.js"></script>
-    <script src="/scripts/controllers/HomeCtrl.js"></script>
-    <script src="/scripts/controllers/AboutCtrl.js"></script>
-    <script src="/scripts/controllers/SkillsCtrl.js"></script>
-    <script src="/scripts/controllers/PortfolioCtrl.js"></script>
-    <script src="/scripts/controllers/ContactCtrl.js"></script>
+    <script src="/scripts/controllers/minified/MasterCtrl.min.js"></script>
+    <script src="/scripts/controllers/minified/HomeCtrl.min.js"></script>
+    <script src="/scripts/controllers/minified/AboutCtrl.min.js"></script>
+    <script src="/scripts/controllers/minified/SkillsCtrl.min.js"></script>
+    <script src="/scripts/controllers/minified/PortfolioMasterCtrl.min.js"></script>
+    <script src="/scripts/controllers/minified/PortfolioCtrl.min.js"></script>
+    <script src="/scripts/controllers/minified/ContactCtrl.min.js"></script>
     <!-- DIRECTIVES -->
     <!-- <script src="/scripts/directives/typeEffect.js"></script> -->
 </body>

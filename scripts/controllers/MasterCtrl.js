@@ -2,9 +2,6 @@ angular
   .module('portApp')
   .controller('MasterCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {
 
-    // $scope.$on('$stateChangeSuccess', function () {
-    //  window.scrollTo(0, 0);
-
     $scope.closeMenu = $(function() {
       $('.panel-collapse').collapse({
         toggle: false
@@ -14,7 +11,7 @@ angular
     $rootScope.$on('$locationChangeStart', function() {
       document.body.scrollTop = document.documentElement.scrollTop = 0;
     });
-
+ 
     $scope.siteNav = [
       {
         id: 0,
@@ -66,9 +63,6 @@ angular
             icon: "fa-envelope-o"
         }
     ];
-
-
-
     // Mobile Menu cross on click
     $scope.isActive = false;
     $scope.activeButton = function() {

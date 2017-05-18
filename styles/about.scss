@@ -14,7 +14,7 @@
     color: $gray;
     margin-bottom: 20px;
     margin: 20px 0;
-  } 
+  }
   .aboutMe {
     font-size: 1.2em;
   }
@@ -28,7 +28,8 @@
     padding: 10px;
   }
   .profileImg {
-    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.3);
+            box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
   }
 }
@@ -39,5 +40,6 @@
   background-color: $gray;
   border: 2px solid $gray-dark;
   border-width: 0 0px 0px 3px;
-  box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.3);
 }
