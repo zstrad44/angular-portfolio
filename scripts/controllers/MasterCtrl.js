@@ -11,35 +11,47 @@ angular
     $rootScope.$on('$locationChangeStart', function() {
       document.body.scrollTop = document.documentElement.scrollTop = 0;
     });
- 
+
     $scope.siteNav = [
       {
         id: 0,
-        name: "About",
-        icon: "fa-address-card-o",
-        url: "about",
-        subMenu: ""
+        name: "Home",
+        icon: "fa-home",
+        url: "home",
+        subMenu: "",
+        home: true
       },
       {
         id: 1,
-        name: "Skills",
-        icon: "fa-sliders",
-        url: "skills",
-        subMenu: ""
+        name: "About",
+        icon: "fa-address-card-o",
+        url: "about",
+        subMenu: "",
+        home: false
       },
       {
         id: 2,
-        name: "Portfolio",
-        icon: "fa-code",
-        url: "portfolio",
-        subMenu: ""
+        name: "Skills",
+        icon: "fa-sliders",
+        url: "skills",
+        subMenu: "",
+        home: false
       },
       {
         id: 3,
+        name: "Portfolio",
+        icon: "fa-code",
+        url: "portfolio",
+        subMenu: "",
+        home: false
+      },
+      {
+        id: 4,
         name: "Contact",
         icon: "fa-mobile",
         url: "contact",
-        subMenu: ""
+        subMenu: "",
+        home: false
       }
     ];
 

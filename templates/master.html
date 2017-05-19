@@ -1,6 +1,6 @@
 <div ng-controller="MasterCtrl">
   <nav class="navbar navbar-fixed-top">
-    <div class="container">
+    <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle burgerButton burger" data-toggle="collapse" data-target="#masterNavbar" ng-class="{'active': isActive}" ng-click="activeButton()" >
               <span></span>
@@ -9,7 +9,8 @@
         </div>
         <div class="collapse navbar-collapse" id="masterNavbar">
             <ul class="nav navbar-nav navbar-right" role="tablist">
-                <li ng-repeat="item in siteNav"><a ui-sref="{{item.url}}"><i class="fa {{item.icon}}"></i>{{item.name | uppercase}}</a></li>
+                <li  ng-repeat="item in siteNav" ng-if="item.home === true" class="hoemBtn"><a ui-sref="{{item.url}}"><i class="fa {{item.icon}}"></i></a></li>
+                <li ng-repeat="item in siteNav" ng-if="item.home === false" class="regBtn"><a ui-sref="{{item.url}}"><i class="fa {{item.icon}}"></i>{{item.name | uppercase}}</a></li>
             </ul>
         </div>
     </div>

@@ -12,7 +12,7 @@
 </div>
 <div class="container heroCards">
     <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-3 outerCard" ng-repeat="item in siteNav">
+        <div class="col-xs-12 col-sm-6 col-md-3 outerCard" ng-repeat="item in siteNav" ng-if="item.home === false">
             <a ui-sref="{{item.url}}">
                 <div class="card">
                     <i class="fa {{item.icon}} visible-md visible-lg cardIcon"></i>

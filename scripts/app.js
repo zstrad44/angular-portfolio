@@ -3,7 +3,8 @@ angular
     'ui.router',
     'ngMeta',
     'ngAnimate',
-    'angular-typed'
+    'angular-typed',
+    'ngScrollbars'
   ])
   .config(['$urlRouterProvider', '$stateProvider', '$locationProvider', 'ngMetaProvider', function($urlRouterProvider, $stateProvider, $locationProvider, ngMetaProvider) {
     // Remove hashbang

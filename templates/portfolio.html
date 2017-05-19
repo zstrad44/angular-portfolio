@@ -1,24 +1,32 @@
 <div ng-controller="PortfolioCtrl" id="portfolio">
     <div class="container-fluid">
         <div class="row">
+            <div class="col-xs-12">
+                <div class="sectionHeadBox">
+                    <div class="cardBox sectionHead">
+                        <h1><i class="fa fa-code"></i> &nbsp; Portfolio:</h1>
+                    </div>
+                </div>
+            </div>
             <div class="col-lg-2">
-                <div class="sidebar">
+                <div class="sidebarHead">
                     <ul class="list-group">
+                        <li class="list-group-item sidebarHead">Projects</li>
+                    </ul>
+                </div>
+                <div ng-scrollbars ng-scrollbars-config="config" class="sidebar">
+                    <ul class="list-group">
+
                       <li class="list-group-item" ng-repeat="project in mainProjects" ng-class="{'active' : tab === project.id }" ng-click="setTab(project.id)"><img src="/assets/screenshots/{{project.img}}" alt="{{project.altText}}" class="img-responsive"><h4>{{project.title}}</h4></li>
                     </ul>
                 </div>
             </div>
             <div class="col-xs-10 col-lg-10">
                 <div class="mainContent">
-                    <div class="sectionHeadBox">
-                        <div class="cardBox sectionHead">
-                            <h1><i class="fa fa-code"></i> &nbsp; Portfolio:</h1>
-                        </div>
-                    </div>
                     <div class="projectBox" ng-repeat="project in mainProjects" ng-show="tab === project.id">
                         <div class="row">
-                          <div class="col-xs-12">
-                              <h2>{{project.title}}</h2>
+                          <div class="col-xs-12 noPadding">
+                              <h2 class="projectTitle">{{project.title}}</h2>
                               <hr>
                           </div>
                           <div class="col-lg-8 imgBox">
@@ -29,19 +37,64 @@
                                 <h3>Project:&nbsp; <span class="text-primary">{{project.name}}</span></h3>
                                 <h3>Technology Used:</h3>
                                 <div class="skillsBox">
-                                    <span ng-repeat="skill in project.tech" class="label skill label-primary">{{skill.name}}</span>
+                                    <span ng-repeat="skill in project.tech">
+                                        <span class="label skill label-primary">{{skill.name}}</span>
+                                    </span>
                                 </div>
                                 <h3>Desciption:</h3>
                                 <p>{{project.details}}</p>
                                 <hr>
-                                <a ui-sref="{{project.link}}" class="btn btn-lg squareBtn squareBtnBlue btn-block viewBtn"><i class="fa fa-expand"></i>&nbsp; Enlarge Screenshot</a>
+                                <a data-toggle="modal" data-target="#lightbox{{project.modalId}}" class="btn btn-lg squareBtn squareBtnBlue btn-block viewBtn"><i class="fa fa-expand"></i>&nbsp; Enlarge Screenshot</a>
                                 <a  ng-if="project.openSource" href="{{project.github}}" class="btn btn-lg wireBtn wireBtnGray btn-block viewCodeBtn" target="_blank"><i class="fa fa-github"></i>&nbsp; View Code</a>
                             </div>
                           </div>
                         </div>
+                        <!-- lightbox container hidden with CSS -->
+                        <!-- <a href="#_" class="lightbox" id="img{{project.id}}">
+                          <img src="/assets/screenshots/{{project.img}}" alt="{{project.altText}}">
+                        </a> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="modalBox" data-dismiss="modal">
+        <div class="modal fade lightboxModal" ng-repeat="project in mainProjects | orderBy:'id'" id="lightbox{{project.modalId}}" role="dialog" >
+            <div class="row">
+                <div class="col-xs-12" data-dismiss="modal">
+
+                    <div class="screenshot" data-dismiss="modal">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" ng-mouseover="message = 'Close'" ng-mouseleave="message = '&times;'" ng-init="message = '&times;'"   >{{message}}</button>
+                            <h4 class="modal-title"><i class="fa fa-code"></i> {{project.name}}</h4>
+                        </div>
+                        <img src="/assets/screenshots/{{project.img}}" alt="{{project.altText}}" class="img-responsive">
+                    </div>
+                </div>
+            <!-- <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" ng-mouseover="message = 'Close'" ng-mouseleave="message = '&times;'" ng-init="message = '&times;'"   >{{message}}</button>
+                        <h4 class="modal-title"><i class="fa fa-code"></i> {{project.name}}</h4>
+                    </div>
+                    <div class="modal-body">
+
+                            <div class="col-xs-12 projectDetails">
+                                <div class="col-xs-12 col-lg-9">
+                                    <h3>{{project.title}}</h3>
+                                    <p>{{project.details}}</p>
+                                </div>
+                                <div class="col-xs-12 col-lg-3">
+                                    <a ui-sref="{{project.link}}" class="btn btn-lg wireBtn wireBtnBlue btn-block">View the Case Study</a>
+                                    <a  ng-if="project.openSource" href="{{project.github}}" class="btn btn-lg wireBtn wireBtnBlue btn-block" target="_blank"><i class="fa fa-github"></i>&nbsp; View Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+
 </div>

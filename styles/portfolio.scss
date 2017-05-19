@@ -7,8 +7,25 @@
   .sectionHead {
     margin: 20px 0;
   }
+  .sidebarHead {
+    background-color: $gray-dark;
+    color: #fff;
+    font-size: 1.4em;
+    margin: 0 0 -20px -15px;
+    padding-left: 15px;
+  }
+  .sidebar {
+      overflow: auto;
+
+      .mCSB_container {
+        padding: 0 !important;
+      }
+  }
   .mainContent {
-    padding: 10px;
+    padding: 10px 0 10px 25px;
+    .projectTitle {
+      margin-top: 0;
+    }
     .imgBox {
       padding: 10px;
       background-color: rgba(255,255,255,1);
@@ -29,6 +46,7 @@
         .label {
           margin-right: 4px;
           font-size: 1em;
+          line-height: 2;
         }
       }
       .viewBtn {
@@ -178,4 +196,51 @@
     .wireBtn {
     }
   }
+}
+
+/** LIGHTBOX MARKUP **/
+
+.lightboxModal {
+  /** Default lightbox to hidden */
+  /* display: none;*/
+  /** Position and style */
+  padding: 40px;
+  text-align: -webkit-center;
+  background: rgba(0, 0, 0, 0.2);
+  .screenshot {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+            margin: 0 auto;
+            background-color: $gray-dark;
+            max-width: 1440px;
+            padding-bottom: 30px;
+            .modal-header {
+              margin-top: -20px;
+              margin-bottom: 30px;
+              max-width: 1440px;
+              text-align: -webkit-left;
+              background: #ddd;
+              .close {
+                  padding: 14px 17px 16px;
+                  background-color: #f33;
+                  opacity: .6;
+                  color: #fff;
+                  -webkit-transition: .3s ease;
+                  -o-transition: .3s ease;
+                  transition: .3s ease;
+                  line-height: .9;
+                  margin-top: -10px;
+              }
+            }
+    img {
+      /** Pad the lightbox image */
+      max-width: 90%;
+      max-height: 80%;
+      margin-top: 2%;
+      -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.6);
+              box-shadow: 0 0 5px rgba(0,0,0,0.6);
+
+    }
+  }
+
 }

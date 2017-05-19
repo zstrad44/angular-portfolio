@@ -27,7 +27,18 @@
     > a:hover {
       background-color: $gray-light;
       color: $gray-dark;
+
     }
+    > a:focus {
+       background-color: $gray-dark !important;
+       color: #fff !important;
+       -webkit-transition: .3s ease;
+       -o-transition: .3s ease;
+       transition: .3s ease;
+   }
+   > a.active {
+      background-color: $primary;
+   }
   }
   border: 1px solid $gray-dark;
   border-width: 0 1px 1px 1px;
@@ -38,18 +49,27 @@
   img {
     height: 60px;
     margin-top: -9px;
+    margin-left: 10px;
   }
 }
 
-.navbar-nav > li > a i {
+.navbar-nav > li > a.regBtn i {
   width: 25px;
 }
+.navbar-nav > li.homeBtn {
+  padding: 15px;
+  >  a i {
+   width: auto;
+ }
+}
+
+
 
 @media (min-width: 1200px) {
   .navbar .navbar-brand {
     padding: 15px 0;
   }
-  .navbar-nav > li > a {
+  .navbar-nav > li.regBtn > a {
     i {
       display: none;
       position: absolute;

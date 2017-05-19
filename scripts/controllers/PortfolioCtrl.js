@@ -1,6 +1,6 @@
 angular
   .module('portApp')
-  .controller('PortfolioCtrl', ['$scope', function($scope) {
+  .controller('PortfolioCtrl', ['$scope', function($scope,  Lightbox) {
 
     $scope.tab = 0;
 
@@ -10,6 +10,38 @@ angular
 
     $scope.isSet = function (tabId) {
        return $scope.tab === tabId;
+    };
+
+    // $scope.openLightboxModal = function (index) {
+    //   Lightbox.openModal($scope.mainProjects, index);
+    // };
+
+    $(document).ready(function(){
+        resizeDiv();
+
+        window.onresize = function(event) {
+        resizeDiv();
+        };
+    });
+
+    function resizeDiv() {
+        var vpw = $(window).width();
+        var vph = $(window).height();
+
+        var newHeight = vph - 250;
+        $scope.height = newHeight;
+
+        $('.sidebar').css({'height': newHeight});
+    }
+
+    $scope.config = {
+     autoHideScrollbar: false,
+      theme: '3d-dark',
+      advanced:{
+      updateOnContentResize: true
+      },
+      setHeight: $scope.height,
+      scrollInertia: 0
     };
 
     $scope.mainProjects = [
