@@ -2,7 +2,7 @@ angular
   .module('portApp')
   .controller('ContactCtrl', ['$scope', function($scope) {
 
-    $scope.disabledRules = " contactForm.$pristine  || contactForm.$invalid || contactForm.name.$pristine || contactForm.name.$dirty && contactForm.name.$invalid || contactForm.email.$pristine || contactForm.email.$dirty && contactForm.email.$invalid || contactForm.message.$dirty && contactForm.message.$invalid";
+    $scope.disabledRules = " contactForm.$pristine";
     $scope.btnDisabledRules = "contactForm.captcha.$invalid || contactForm.captcha.$dirty && contactForm.captcha.$invalid || contactForm.$pristine  || contactForm.$invalid || contactForm.name.$pristine || contactForm.name.$dirty && contactForm.name.$invalid || contactForm.email.$pristine || contactForm.email.$dirty && contactForm.email.$invalid || contactForm.message.$dirty && contactForm.message.$invalid";
 
     // $scope.initDropdownMenu = function () {
@@ -20,7 +20,6 @@ angular
     //     });
     //   };
     //     $scope.initDropdownMenu();
-
 
     $scope.checkCaptcha = function() {
       $scope.captcha = $("#captcha").keyup(function(){

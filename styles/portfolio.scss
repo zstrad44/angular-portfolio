@@ -16,7 +16,12 @@
   }
   .sidebar {
       overflow: auto;
-
+        .list-group {
+            .list-group-item {
+                margin-bottom: 10px;
+                cursor: pointer;
+            }
+        }
       .mCSB_container {
         padding: 0 !important;
       }

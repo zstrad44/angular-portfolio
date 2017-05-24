@@ -15,13 +15,13 @@
                             <div class="row">
                                 <div class="col-lg-8">
                                     <div class="card formBox">
-                                        <form data-toggle="validator" role="form" name="contactForm">
+                                        <form data-toggle="validator" role="form" action="https://submit.jotform.us/submit/71428649684167/" method="post" name="form_71428649684167" id="71428649684167" accept-charset="utf-8">
                                             <div class="col-xs-12">
                                                 <div class="row">
                                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                         <div class="form-group">
-                                                            <label for="name">Name:</label>
-                                                            <input type="text" name="name" class="form-control" id="name" ng-model="name" placeholder="Bill Gates" required>
+                                                            <label for="q3_name">Name:</label>
+                                                            <input type="text" name="q3_name" class="form-control" id="q3_name" ng-model="name" placeholder="Bill Gates" required>
                                                             <span style="color:red" ng-show="contactForm.name.$dirty && contactForm.name.$invalid">
                                                                 <span ng-show="contactForm.name.$error.required">Your name is required.</span>
                                                             </span>
@@ -29,8 +29,8 @@
                                                     </div>
                                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                         <div class="form-group">
-                                                            <label for="company">Company/ Organization:</label>
-                                                            <input type="text" name="company" class="form-control" ng-model="company" id="company" placeholder="Microsoft">
+                                                            <label for="q4_company">Company/ Organization:</label>
+                                                            <input type="text" name="q4_company" class="form-control" ng-model="company" id="company" placeholder="Microsoft">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -39,8 +39,8 @@
                                                 <div class="row">
                                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                         <div class="form-group">
-                                                            <label for="email">Email:</label>
-                                                            <input type="email" name="email" ng-model="email" class="form-control" id="email" placeholder="RealBillGates@hotmail.com" required>
+                                                            <label for="q5_email">Email:</label>
+                                                            <input type="email" name="q5_email" ng-model="email" class="form-control" id="email" placeholder="RealBillGates@hotmail.com" required>
                                                             <span style="color:red" ng-show="contactForm.email.$dirty && contactForm.email.$invalid">
                                                                 <span ng-show="contactForm.email.$error.required">Email is required.</span>
                                                                 <span ng-show="contactForm.email.$error.email">Invalid email address.</span>
@@ -49,8 +49,8 @@
                                                     </div>
                                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                         <div class="form-group">
-                                                            <label for="phone">Phone:</label>
-                                                            <input type="phone" name="phone" ng-model="phone" class="form-control" id="phone" placeholder="480-555-5555">
+                                                            <label for="q6_phone">Phone:</label>
+                                                            <input type="phone" name="q6_phone" ng-model="phone" class="form-control" id="phone" placeholder="480-555-5555">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -59,8 +59,8 @@
                                                 <div class="row">
                                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                                         <div class="form-group">
-                                                            <label for="message">Message:</label>
-                                                            <textarea class="form-control" rows="3" name="message" id="message" ng-model="message" required></textarea>
+                                                            <label for="q7_message">Message:</label>
+                                                            <textarea class="form-control" rows="3" name="q7_message" id="message" ng-model="message" required></textarea>
                                                             <span style="color:red" ng-show="contactForm.message.$dirty && contactForm.message.$invalid">
                                                                 <span ng-show="contactForm.message.$error.required">A brief message is required.</span>
                                                             </span>
@@ -80,12 +80,12 @@
                                                 <div class="row">
                                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                         <div class="form-group">
-                                                            <label for="selectType">{{name}} is a:</label><br>
+                                                            <label for="q8_selectType">{{name}} is a:</label><br>
                                                             <label class="radio-inline">
-                                                              <input type="radio" name="selectType" ng-model="selectType" required>Technical Recruiter
+                                                              <input type="radio" name="q8_selectType" value="Yes, I am a Technical Recruiter" ng-model="selectType" required>Technical Recruiter
                                                             </label>
                                                             <label class="radio-inline">
-                                                              <input type="radio" name="selectType" ng-model="selectType" required>Other
+                                                              <input type="radio" name="q8_selectType" value="No, I am not a Technical Recruiter" ng-model="selectType" required>Other
                                                             </label>
                                                             <span style="color:red" ng-show="contactForm.selectType.$dirty && contactForm.selectType.$invalid">
                                                                 <span ng-show="contactForm.selectType.$error.required">A brief message is required.</span>
@@ -104,7 +104,7 @@
                                                 <div class="row">
                                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                                         <br>
-                                                        <button id="submitBtn" type="submit" class="btn btn-block squareBtn squareBtnBlue disabled"><i class="fa fa-send"></i> Send</button>
+                                                        <button id="submitBtn" type="submit" data-component="button" class="btn btn-block squareBtn squareBtnBlue disabled"><i class="fa fa-send"></i> Send</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -114,7 +114,12 @@
                                 </div>
                                 <div class="col-xs-12 col-lg-4">
                                     <div class="card contactInfoCard">
-                                        <div class="list-group"> <a class="list-group-item" href="#"><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i>&nbsp; Email Directly</a> <a class="list-group-item" href="#"><i class="fa fa-linkedin fa-fw" aria-hidden="true"></i>&nbsp; Linkedin Profile</a>                                        <a class="list-group-item" href="#"><i class="fa fa-github fa-fw" aria-hidden="true"></i>&nbsp; Github</a> <a class="list-group-item" href="#"><i class="fa fa-file-pdf-o fa-fw" aria-hidden="true"></i>&nbsp; Download Resume</a>                                        </div>
+                                        <div class="list-group">
+                                            <a class="list-group-item" href="mailto:{{contact.email}}" target="_blank"><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i>&nbsp; Email Directly</a>
+                                            <a class="list-group-item" href="{{contact.linkedin}}" target="_blank"><i class="fa fa-linkedin fa-fw" aria-hidden="true"></i>&nbsp; Linkedin Profile</a>
+                                            <a class="list-group-item" href="{{contact.github}}" target="_blank"><i class="fa fa-github fa-fw" aria-hidden="true"></i>&nbsp; Github</a>
+                                            <a class="list-group-item" href="#" target="_blank"><i class="fa fa-file-pdf-o fa-fw" aria-hidden="true"></i>&nbsp; Download Resume</a>
+                                       </div>
                                     </div>
                                 </div>
                             </div>

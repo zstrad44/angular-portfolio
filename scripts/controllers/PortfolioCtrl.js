@@ -37,22 +37,19 @@ angular
     $scope.config = {
      autoHideScrollbar: false,
       theme: '3d-dark',
-      advanced:{
-      updateOnContentResize: true
-      },
       setHeight: $scope.height,
       scrollInertia: 0
     };
 
     $scope.mainProjects = [
       {
-          id: 1,
+          id: 0,
           name: "AZ Atty App",
           altText: "Ruby on Rails application",
           img: "az-atty-app/screenshot-az-atty-app-admin-dashboard.png",
           link: "#",
           github: "https://github.com/zstrad44/az-atty-app",
-          title: "Legal Notice Management Application",
+          title: "Rails Legal Notice Management Application",
           details: "In December 2016, Arizona Attorney Services expanded their client base. I was tasked alone, with developing, creating and designing a web application that would allow them to easily manage their landlord tenant services.",
           modalId: "1",
           openSource: true,
@@ -84,14 +81,14 @@ angular
           ]
       },
       {
-          id: 2,
+          id: 1,
           name: "TaskBloc",
-          altText: "Ruby on Rails todo list application.",
+          altText: "Rails ToDo list application.",
           img: "taskBloc/screenshot-taskbloc-dashboard.png",
           link: "#",
           github: "https://github.com/zstrad44/blocitoff",
-          title: "Self Destructing To-Do List App",
-          details: " I built this...",
+          title: "Rails Self Destructing To-Do List App",
+          details: "To-do lists are notorious for collecting junk: to-do items that you want to remember, but are not very important and thus get consistently put off. To address the problem of to-do list clutter, I have created TaskBloc. TaskBloc will aim to keep to-do lists manageable by automatically deleting to-do items that have not been completed after seven days. The hypothesis is that if the to-do item is not important enough to be completed in seven days, it doesn't belong on your to-do list.",
           modalId: "2",
           openSource: true,
           tech: [
@@ -122,14 +119,14 @@ angular
           ]
       },
       {
-          id: 3,
+          id: 2,
           name: "Connexis Cloud",
           altText: "Connexis Cloud Screenshot",
           img: "connexis-cloud/screenshot-connexiscloud-login.png",
           link: "#",
           github: "#",
           title: "Enterprise Management Application",
-          details: "Worked on this..",
+          details: "Connecting you with a nexus of case management resources. Connexis Cloud specialty court software centralizes critical information for your organization, organizational unit, site, program and client all while standardizing processes designed for successful case management.  Connexis Clouds' advanced permissions system allows multiple programs at many different locations to specifically manage each site as is required by that site specifically.",
           modalId: "3",
           openSource: false,
           tech: [
@@ -152,14 +149,14 @@ angular
           ]
       },
       {
-          id: 4,
+          id: 3,
           name: "iMs Supplies",
           altText: "ecommerce application",
           img: "ims-supplies/screenshot-supplies.ims-trident-index.png",
           link: "#",
           github: "#",
           title: "Ecommerce Web Application",
-          details: "I built this..",
+          details: "Solution for iMs clients to purchase supplies. Designed as a supplies portal for iMs customers. Allows all users to create their own account and automate the purchase process for ordering supplies. ",
           modalId: "4",
           openSource: false,
           tech: [
@@ -178,18 +175,22 @@ angular
             {
               id: 3,
               name: 'JavaScript'
+            },
+            {
+              id: 4,
+              name: 'Shopify SDK'
             }
           ]
       },
       {
-          id: 5,
+          id: 4,
           name: "Goldman Accident",
           altText: "Lawfirm Angular Website",
           img: "goldman-accident/screenshot-goldman-accident-index.png",
           link: "#",
           github: "https://github.com/zstrad44/goldman-accident-angular",
           title: "AngularJS Web Application",
-          details: "I built this..",
+          details: "Lawfirm website designed for lead generation. Targets users searching for a personal injury lawyers.",
           modalId: "5",
           openSource: true,
           tech: [

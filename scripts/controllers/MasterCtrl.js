@@ -55,17 +55,26 @@ angular
       }
     ];
 
+    $scope.contact =
+    {
+      phone: '480-489-0076',
+      email: 'zachstradling@gmail.com',
+      github: 'https://github.com/zstrad44',
+      linkedin: 'https://www.linkedin.com/in/zacharystradling/',
+      resume: '/assets/resume.pdf'
+    };
+
     $scope.socialMedia = [
         {
             id: 1,
             name: "GitHub",
-            url: "",
+            url: "https://github.com/zstrad44",
             icon: "fa-github"
         },
         {
             id: 1,
             name: "Linkedin",
-            url: "",
+            url: "https://www.linkedin.com/in/zacharystradling/",
             icon: "fa-linkedin"
         },
         {

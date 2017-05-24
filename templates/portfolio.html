@@ -9,11 +9,11 @@
                 </div>
             </div>
             <div class="col-lg-2">
-                <div class="sidebarHead">
+                <!-- <div class="sidebarHead">
                     <ul class="list-group">
                         <li class="list-group-item sidebarHead">Projects</li>
                     </ul>
-                </div>
+                </div> -->
                 <div ng-scrollbars ng-scrollbars-config="config" class="sidebar">
                     <ul class="list-group">
 
@@ -30,7 +30,7 @@
                               <hr>
                           </div>
                           <div class="col-lg-8 imgBox">
-                            <img src="/assets/screenshots/{{project.img}}" alt="{{project.altText}}" class="img-responsive mainThumbnail">
+                            <img src="/assets/screenshots/{{project.img}}" alt="{{project.altText}}" class="img-responsive mainThumbnail"  data-toggle="modal" data-target="#lightbox{{project.modalId}}">
                           </div>
                           <div class="col-lg-4">
                             <div class="detailsBox card">
