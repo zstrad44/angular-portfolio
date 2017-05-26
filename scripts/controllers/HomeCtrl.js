@@ -5,7 +5,7 @@ angular
     "&lt;%= Ruby on Rails %&gt;",
     "(){ JavaScript }",
     "&lt; HTML5 /&gt;",
-     "#CSS { <br>content: CSS3, SASS<br> }",
+     "#CSS { <br>content: CSS3;<br> &amp;:SASS<br> }",
      "&lt; Zach Stradling /&gt;" ];
      $scope.secondLines = ["Full Stack Developer"];
 

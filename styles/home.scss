@@ -5,10 +5,9 @@
 .hero-bg {
   -webkit-box-shadow: 0 -10px 10px -10px #2C3E50;
           box-shadow: 0 -10px 10px -10px #2C3E50;
-  background: -webkit-radial-gradient(bottom, $info 2%, $primary 20%);
-  background: -o-radial-gradient(bottom, $info 2%, $primary 20%);
-  background: radial-gradient(to top, $info 2%, $primary 20%);
-  /*Standard*/
+  background: -webkit-radial-gradient(center, ellipse, #54a1da, #1b75b9) !important;
+  background: -o-radial-gradient(center, ellipse, #54a1da, #1b75b9) !important;
+  background: radial-gradient(ellipse at center, #54a1da, #1b75b9) !important;
   background-position: center;
   background-blend-mode: color;
 }
