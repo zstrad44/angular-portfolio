@@ -118,7 +118,12 @@
                                             <a class="list-group-item" href="mailto:{{contact.email}}" target="_blank"><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i>&nbsp; Email Directly</a>
                                             <a class="list-group-item" href="{{contact.linkedin}}" target="_blank"><i class="fa fa-linkedin fa-fw" aria-hidden="true"></i>&nbsp; Linkedin Profile</a>
                                             <a class="list-group-item" href="{{contact.github}}" target="_blank"><i class="fa fa-github fa-fw" aria-hidden="true"></i>&nbsp; Github</a>
-                                            <a class="list-group-item" href="#" target="_blank"><i class="fa fa-file-pdf-o fa-fw" aria-hidden="true"></i>&nbsp; Download Resume</a>
+                                            <a class="list-group-item visible-lg" ui-sref="resume"><i class="fa fa-file-pdf-o fa-fw" aria-hidden="true"></i>&nbsp; Download Resume</a>
+                                            <a class="list-group-item hidden-lg" data-toggle="collapse" data-target="#downloads"><i class="fa fa-file-pdf-o fa-fw" aria-hidden="true"></i>&nbsp; Download Resume</a>
+                                            <div id="downloads" class="collapse downloadDropdown" ng-controller="ResumeCtrl">
+                                                <a href="{{colorResume}}" class="btn squareBtn squareBtnBlue btn-block" target="_blank">Color Version PDF</a>
+                                                <a href="{{bwResume}}" class="btn squareBtn squareBtnGray btn-block" target="_blank">Printer Friendly Version PDF</a>
+                                            </div>
                                        </div>
                                     </div>
                                 </div>

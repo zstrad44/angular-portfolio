@@ -1,0 +1,42 @@
+@import "utilities/colors.scss";
+
+.resumePage {
+    margin-top: 100px;
+    .resumeSidebar {
+        h3 {
+            margin-top: 5px;
+        }
+
+        .lowerBox {
+            margin-top: 25px;
+        }
+    }
+    .controls {
+        margin: 0 auto;
+        padding: 5px;
+        background-color: $gray;
+        text-align: center;
+        .btn {
+            background-color: #fff;
+            color: $gray;
+            border-radius: 0;
+            -webkit-transition: .3s ease;
+            -o-transition: .3s ease;
+            transition: .3s ease;
+            &:hover {
+                background-color: $primary;
+                color: #fff;
+            }
+        }
+    }
+    ng-pdf {
+        text-align: center;
+        padding: 15px 5px;
+        background-color: $gray;
+    }
+    canvas {
+        width: 100%;
+        -webkit-box-shadow: 2px 4px 8px rgba(0,0,0,.5)    ;
+                box-shadow: 2px 4px 8px rgba(0,0,0,.5)    ;
+}
+}

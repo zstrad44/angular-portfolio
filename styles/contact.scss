@@ -12,7 +12,7 @@
     .form-control {
       border-radius: 0;
     }
-  } 
+  }
   .contactInfoCard {
     text-align: left;
     font-size: 1.3em;
@@ -43,7 +43,13 @@
     border-radius: 0;
   }
 }
-
+#contact .contactInfoCard {
+    .downloadDropdown {
+        background-color: #eee;
+        padding: 5px;
+        border: 1px solid $primary;
+    }
+}
 #contact .contactInfoCard .list-group a.list-group-item .fa {
   color: #1b75b9;
 }

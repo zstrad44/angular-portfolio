@@ -16,7 +16,6 @@
                 </div> -->
                 <div ng-scrollbars ng-scrollbars-config="config" class="sidebar">
                     <ul class="list-group">
-
                       <li class="list-group-item" ng-repeat="project in mainProjects" ng-class="{'active' : tab === project.id }" ng-click="setTab(project.id)"><img src="/assets/screenshots/{{project.img}}" alt="{{project.altText}}" class="img-responsive"><h4>{{project.title}}</h4></li>
                     </ul>
                 </div>

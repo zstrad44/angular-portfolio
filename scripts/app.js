@@ -4,7 +4,8 @@ angular
     'ngMeta',
     'ngAnimate',
     'angular-typed',
-    'ngScrollbars'
+    'ngScrollbars',
+    'pdf'
   ])
   .config(['$urlRouterProvider', '$stateProvider', '$locationProvider', 'ngMetaProvider', function($urlRouterProvider, $stateProvider, $locationProvider, ngMetaProvider) {
     // Remove hashbang
@@ -35,7 +36,7 @@ angular
                       ngMeta.setTitle('Zach Stradling | Software Engineer');
                       ngMeta.setTag('url', 'http://zachstradling.com/');
                       ngMeta.setTag('type', 'website');
-                      ngMeta.setTag('image', 'http://goldmanaccidentlawyers.com/assets/zs-circle-logo_355x355_trans.png');
+                      ngMeta.setTag('image', '');
                       ngMeta.setTag('description', 'Software Engineer in Tempe, Arizona. I have been doing web design and programming for over 6 years and have worked on projects of different sizes and in various industries.');
                       ngMeta.setTag('site_name', 'Zach Stradling | Software Engineer');
                   }
@@ -71,6 +72,12 @@ angular
         parent: 'master',
         templateUrl: '/templates/contact.html',
         controller: 'ContactCtrl'
+      })
+      .state('resume', {
+        url: '/resume',
+        parent: 'master',
+        templateUrl: '/templates/resume.html',
+        controller: 'ResumeCtrl'
       });
 
       $locationProvider.html5Mode(true);

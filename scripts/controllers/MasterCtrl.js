@@ -12,6 +12,27 @@ angular
       document.body.scrollTop = document.documentElement.scrollTop = 0;
     });
 
+    $scope.reload = function(){
+    $state.reload();
+  };
+
+    $scope.initDropdownMenu = function () {
+      $(function () {
+        // wait till load event fires so all resources are available
+        $scope.dropdownMenu = $('ul.nav li.dropdown').hover(function() {
+          if (parseInt($(window).width()) > 1100) {
+            $(this).find('.dropdown-menu').stop(true, true).delay(150).slideDown(500);
+          }
+        }, function() {
+          if (parseInt($(window).width()) > 1100) {
+            $(this).find('.dropdown-menu').stop(true, true).delay(150).slideUp(400);
+          }
+        });
+      });
+    };
+    $scope.initDropdownMenu();
+
+
     $scope.siteNav = [
       {
         id: 0,
@@ -60,8 +81,7 @@ angular
       phone: '480-489-0076',
       email: 'zachstradling@gmail.com',
       github: 'https://github.com/zstrad44',
-      linkedin: 'https://www.linkedin.com/in/zacharystradling/',
-      resume: '/assets/resume.pdf'
+      linkedin: 'https://www.linkedin.com/in/zacharystradling/'
     };
 
     $scope.socialMedia = [

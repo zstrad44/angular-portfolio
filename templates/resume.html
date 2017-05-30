@@ -1,0 +1,27 @@
+<div class="resumePage" ng-controller="ResumeCtrl">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-lg-3 resumeSidebar">
+                <div class="cardBox">
+                    <h3><i class="fa fa-download"></i> Downloads</h3>
+                    <hr>
+                    <a href="{{colorResume}}" class="btn squareBtn squareBtnBlue btn-block" target="_blank">Color Version PDF</a>
+                    <a href="{{bwResume}}" class="btn squareBtn squareBtnGray btn-block" target="_blank">Printer Friendly Version PDF</a>
+                </div>
+                <div class="cardBox lowerBox">
+                    <a ui-sref="contact" class="btn squareBtn squareBtnBlue btn-block"><i class="fa fa-undo"></i>&nbsp; Back to Contact Page</a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-lg-9 hidden-xs hidden-sm">
+                <div class="resumeBox cardBox">
+                    <div class="controls">
+                        <button ng-click="zoomIn()" class="btn"><i class="fa fa-plus-circle"></i></span></button>
+                        <button ng-click="fit()" class="btn">Reset</span></button>
+                        <button ng-click="zoomOut()" class="btn"><i class="fa fa-minus-circle"></i></span></button>
+                    </div>
+                    <ng-pdf template-url="/templates/partials/viewer.html" scale="1.2"></ng-pdf>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

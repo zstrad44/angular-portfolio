@@ -12,7 +12,7 @@ angular
     $(function(){
       $(".heroName").typed({
         strings:$scope.firstLines,
-        typeSpeed: 60,
+        typeSpeed: 40,
         contentType: 'html',
         startDelay: 1000,
         callback: function() {

@@ -7,10 +7,16 @@
           </button>
             <a class="navbar-brand" ui-sref="home"><img src="/assets/zs-circle-logo_355x355_trans.png" alt="Zach Stradling" class="img-responsive"></a>
         </div>
-        <div class="collapse navbar-collapse" id="masterNavbar">
-            <ul class="nav navbar-nav navbar-right" role="tablist">
-                <li  ng-repeat="item in siteNav" ng-if="item.home === true" class="hoemBtn"><a ui-sref="{{item.url}}"><i class="fa {{item.icon}}"></i></a></li>
-                <li ng-repeat="item in siteNav" ng-if="item.home === false" class="regBtn"><a ui-sref="{{item.url}}"><i class="fa {{item.icon}}"></i>{{item.name | uppercase}}</a></li>
+        <div class="collapse navbar-collapse" id="masterNavbar" ng-cloak>
+            <ul class="nav navbar-nav navbar-right" ng-cloak>
+                <li  ng-repeat="item in siteNav"  data-toggle="collapse" data-target="#masterNavbar" ng-click="activeButton()" ng-cloak>
+                  <!-- Link with just Icon, for desktop screens -->
+                  <a ui-sref="{{item.url}}" ng-if="item.home === true" class="hoemBtn visible-lg" ng-cloak><i class="fa {{item.icon}}"></i></a>
+                  <!-- Link with HOME, for mobile screens -->
+                  <a ui-sref="{{item.url}}" ng-if="item.home === true" class="hoemBtn hidden-lg" ng-cloak><i class="fa {{item.icon}}"></i>HOME</a>
+                  <!-- Regular nav links, for all screens -->
+                  <a ui-sref="{{item.url}}" ng-if="item.home === false" class="regBtn" ng-cloak><i class="fa {{item.icon}}"></i>{{item.name | uppercase}}</a>
+                </li>
             </ul>
         </div>
     </div>
