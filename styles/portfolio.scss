@@ -7,6 +7,28 @@
   .sectionHead {
     margin: 20px 0;
   }
+  .sectionDropDown {
+
+    .mainBtn {
+      background-color: $gray-dark;
+      color: #ffffff;
+    }
+    .btn-group-vertical {
+      width: 100%;
+      .menuItemBtn {
+        background-color: $gray;
+        border-radius: 0;
+        padding: 10px 0 10px 7px;
+        color: #fff;
+        margin-bottom: 2px;
+        text-align: left;
+      }
+      .menuItemBtn.active {
+        background-color: $primary;
+      }
+    }
+  }
+
   .sidebarHead {
     background-color: $gray-dark;
     color: #fff;
@@ -22,6 +44,38 @@
                 cursor: pointer;
             }
         }
+        .mCustomScrollBox {
+            border: 1px solid #dbd8d8;
+            border-width: 1px 1px 2px 1px;
+            -webkit-box-shadow: 0 1px 0 #e7e7e7;
+            box-shadow: 0 1px 0 #e7e7e7;
+
+            .mCSB_container_wrapper {
+              margin-right: 18px;
+              background-color: #ffffff;
+            }
+            .list-group {
+              padding: 5px 7px 5px 5px;
+              border-right: 1px solid #e7e7e7;
+              .list-group-item {
+                border: 1px solid #dbd8d8;
+                -webkit-box-shadow: 0 1px 0 #e7e7e7;
+                box-shadow: 0 1px 0 #e7e7e7;
+                background-color: #fafafa;
+                -webkit-transition: .3s ease;
+                -o-transition: .3s ease;
+                transition: .3s ease;
+                &:hover {
+                  background-color: $primary;
+                  color: #ffffff;
+                }
+              }
+              .list-group-item.active {
+                background-color: $primary;
+                color: #ffffff;
+              }
+            }
+        }
       .mCSB_container {
         padding: 0 !important;
       }
@@ -34,11 +88,14 @@
     .imgBox {
       padding: 10px;
       background-color: rgba(255,255,255,1);
-              -webkit-box-shadow: 0 0 5px rgba(0,0,0,.2);
-                      box-shadow: 0 0 5px rgba(0,0,0,.2);
-              border-radius: 4px;
+      :hover {
+        -webkit-box-shadow: 0px 0px 8px #bbb;
+                box-shadow: 0px 0px 8px #bbb;
+      }
       img {
         border:1px solid rgba(0,0,0,.09);
+        /* cursor: pointer;*/
+        cursor:-webkit-zoom-in;
       }
     }
     .detailsBox {
@@ -81,6 +138,27 @@
           }
         }
       }
+    }
+  }
+  @media(max-width: 1000px) {
+    .mainContent {
+      padding: 15px !important;
+      .projectTitle {
+        margin-top: 0;
+        display: block;
+        position: inherit;
+        color: gray;
+        z-index: +1;
+        padding: 10px;
+        font-size: 2em;
+      }
+      hr {
+        display: none;
+      }
+    }
+    .innerNoPadding {
+      margin-top: 20px;
+      padding: 0;
     }
   }
   h1 {

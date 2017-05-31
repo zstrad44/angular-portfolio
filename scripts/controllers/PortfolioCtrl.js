@@ -36,7 +36,7 @@ angular
 
     $scope.config = {
      autoHideScrollbar: false,
-      theme: '3d-dark',
+      theme: 'dark-thick',
       setHeight: $scope.height,
       scrollInertia: 0
     };
@@ -77,6 +77,10 @@ angular
             {
               id: 5,
               name: 'JavaScript'
+            },
+            {
+              id: 6,
+              name: 'postgreSQL'
             }
           ]
       },
@@ -115,6 +119,10 @@ angular
             {
               id: 5,
               name: 'JavaScript'
+            },
+            {
+              id: 6,
+              name: 'postgreSQL'
             }
           ]
       },

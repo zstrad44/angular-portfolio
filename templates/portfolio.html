@@ -8,19 +8,26 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2">
-                <!-- <div class="sidebarHead">
-                    <ul class="list-group">
-                        <li class="list-group-item sidebarHead">Projects</li>
-                    </ul>
-                </div> -->
+            <div class="col-xs-12 visible-xs visible-sm">
+                <div class="sectionDropDown">
+                    <div class="cardBox">
+                        <button type="button" class="btn squareBtn squareBtnBlue btn-block mainBtn" data-toggle="collapse" data-target="#portfolioMenu">Select Project</button>
+                        <div class="sectionDropDownList collapse" id="portfolioMenu">
+                            <div class="btn-group-vertical">
+                              <button ng-repeat="project in mainProjects" ng-class="{'active' : tab === project.id }" ng-click="setTab(project.id)" type="button" class="btn btn-block menuItemBtn" data-toggle="collapse" data-target="#portfolioMenu">{{project.title}}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 visible-lg">
                 <div ng-scrollbars ng-scrollbars-config="config" class="sidebar">
                     <ul class="list-group">
                       <li class="list-group-item" ng-repeat="project in mainProjects" ng-class="{'active' : tab === project.id }" ng-click="setTab(project.id)"><img src="/assets/screenshots/{{project.img}}" alt="{{project.altText}}" class="img-responsive"><h4>{{project.title}}</h4></li>
                     </ul>
                 </div>
             </div>
-            <div class="col-xs-10 col-lg-10">
+            <div class="col-xs-12 col-lg-10">
                 <div class="mainContent">
                     <div class="projectBox" ng-repeat="project in mainProjects" ng-show="tab === project.id">
                         <div class="row">
@@ -28,10 +35,10 @@
                               <h2 class="projectTitle">{{project.title}}</h2>
                               <hr>
                           </div>
-                          <div class="col-lg-8 imgBox">
+                          <div class="col-lg-8 imgBox cardBox">
                             <img src="/assets/screenshots/{{project.img}}" alt="{{project.altText}}" class="img-responsive mainThumbnail"  data-toggle="modal" data-target="#lightbox{{project.modalId}}">
                           </div>
-                          <div class="col-lg-4">
+                          <div class="col-lg-4 innerNoPadding">
                             <div class="detailsBox card">
                                 <h3>Project:&nbsp; <span class="text-primary">{{project.name}}</span></h3>
                                 <h3>Technology Used:</h3>
