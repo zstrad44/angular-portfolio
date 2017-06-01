@@ -9,7 +9,7 @@ angular
     };
 
     $scope.isSet = function (tabId) {
-       return $scope.tab === tabId;
+       return $scope.tab === tabId; 
     };
 
     // $scope.openLightboxModal = function (index) {
