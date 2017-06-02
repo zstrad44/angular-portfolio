@@ -7,14 +7,14 @@ AngularJS web application I created to present myself to all my fans (:smirk:). 
 - My Skills
 - Portfolio
 - Contact
-***
+
 ## Technology Used
 - AngularJS 1.3.15
 - jQuery 3.1.1
 - Bootstrap 3.2
 - Google Fonts SOURCE SANS PRO & UBUNTU
 - FontAwesome 4.7.0 
-***
+
 ## Directives & Plugins
 - Angular-ui router 0.3.2
 - Angular-Animate
