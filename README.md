@@ -24,4 +24,4 @@ AngularJS web application I created to present myself to all my fans (:smirk:). 
 - malihu-custom-scrollbar-plugin JS
 
 ***
-View project here: [ZachStradling.com](https://www.zachstradling.com)
+View project here: [ZachStradling.com](https://www.zachstradling.com) 
