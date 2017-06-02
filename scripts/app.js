@@ -9,10 +9,10 @@ angular
   ])
   .config(['$urlRouterProvider', '$stateProvider', '$locationProvider', 'ngMetaProvider', function($urlRouterProvider, $stateProvider, $locationProvider, ngMetaProvider) {
     // Remove hashbang
-    $locationProvider.html5Mode({
-        enabled: true,
+    $locationProvider.html5Mode({ 
+        enabled: true, 
         requireBase: true,
-        rewriteLinks: false,
+        rewriteLinks: false
     });
     // Redirect 404
     $urlRouterProvider.otherwise('/');
